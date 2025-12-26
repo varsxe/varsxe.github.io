@@ -2,36 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Works | Your Name</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Store | Your Name</title>
+  <link rel="stylesheet" href="modern.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<header class="glass">
-  <h1>My Works</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="works.html">Works</a>
-  </nav>
-</header>
+<div class="container">
 
-<section class="glass">
-  <h2>3D Models for Sale</h2>
-  <p>High-quality models ready for production.</p>
-  <a class="buy" href="https://gumroad.com/yourproduct" target="_blank">
-    Buy on Gumroad
-  </a>
-</section>
+  <div class="section">
+    <h2>Digital Products</h2>
 
-<section class="glass">
-  <h2>Artwork</h2>
-  <p>Digital artwork and design assets.</p>
-</section>
+    <div class="grid grid-3">
 
-<footer>
-  <p>© 2025 Your Name</p>
-</footer>
+      <div class="product">
+        <div class="preview-box">
+          <img src="product1.jpg">
+          <video muted loop>
+            <source src="product-preview1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3>Cinematic Environment Pack</h3>
+        <div class="price">₹1,999</div>
+        <p>Blender + Unreal Engine optimized environment assets.</p>
+        <a class="buy-btn" href="#">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <div class="preview-box">
+          <img src="product2.jpg">
+          <video muted loop>
+            <source src="product-preview2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3>Realistic Props Collection</h3>
+        <div class="price">₹999</div>
+        <p>High quality props for games and cinematic renders.</p>
+        <a class="buy-btn" href="#">Buy Now</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>© 2025 Your Name</footer>
+
+</div>
+
+<script>
+  document.querySelectorAll('.preview-box').forEach(box => {
+    const video = box.querySelector('video');
+    box.addEventListener('mouseenter', () => video.play());
+    box.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>
 
 </body>
 </html>
