@@ -3,44 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <title>Your Name | Creative Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modern.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<header class="glass">
-  <h1>Your Name</h1>
-  <p>Video • Design • 3D Modeling</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="works.html">Works</a>
-    <a href="https://instagram.com/yourid" target="_blank">Instagram</a>
-  </nav>
-</header>
+<div class="container">
 
-<section class="glass">
-  <h2>About Me</h2>
-  <p>
-    I am a creative artist specializing in video production, digital design,
-    and 3D modeling. This portfolio showcases my selected works.
-  </p>
-</section>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="name">Your Name</div>
 
-<section class="glass">
-  <h2>Video Work</h2>
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-    frameborder="0" allowfullscreen></iframe>
-</section>
+    <div class="contact">
+      <span>Email: your@email.com</span>
+      <span>Location: India</span>
+    </div>
 
-<section class="glass">
-  <h2>3D Model Showcase</h2>
-  <iframe src="https://sketchfab.com/models/MODEL_ID/embed"
-    frameborder="0" allowfullscreen></iframe>
-</section>
+    <div class="tagline">
+      Video creator, Blender 3D artist, and Unreal Engine environment designer focused on cinematic visuals and real-time assets.
+    </div>
 
-<footer>
-  <p>© 2025 Your Name</p>
-</footer>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-artstation"></i></a>
+      <a href="#"><i class="fab fa-behance"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <!-- BLENDER ANIMATION PREVIEW -->
+  <div class="section">
+    <h2>Blender – Animation Preview</h2>
+    <div class="label">Hover to preview animation</div>
+
+    <div class="grid grid-3">
+
+      <div class="preview-box">
+        <img src="blender-thumb1.jpg">
+        <video muted loop>
+          <source src="blender-preview1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="preview-box">
+        <img src="blender-thumb2.jpg">
+        <video muted loop>
+          <source src="blender-preview2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="preview-box">
+        <img src="blender-thumb3.jpg">
+        <video muted loop>
+          <source src="blender-preview3.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- UNREAL ENGINE -->
+  <div class="section">
+    <h2>Unreal Engine Projects</h2>
+    <div class="grid grid-2">
+      <img src="unreal1.jpg">
+      <img src="unreal2.jpg">
+    </div>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <div class="section">
+    <h2>Video Works</h2>
+    <div class="grid grid-2">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+    </div>
+  </div>
+
+  <!-- YOUTUBE SECTION -->
+  <div class="section">
+    <h2>YouTube Channel</h2>
+    <p class="label">Latest uploads</p>
+
+    <div class="grid grid-3">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+    </div>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="section">
+    <h2>Photography & Design</h2>
+    <div class="grid grid-3">
+      <img src="photo1.jpg">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+    </div>
+  </div>
+
+  <footer>© 2025 Your Name</footer>
+
+</div>
+
+<script>
+  // Hover play videos
+  document.querySelectorAll('.preview-box').forEach(box => {
+    const video = box.querySelector('video');
+    box.addEventListener('mouseenter', () => video.play());
+    box.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>
 
 </body>
 </html>
