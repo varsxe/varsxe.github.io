@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0b0b0b, #151515);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.name {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.tagline {
+  opacity: 0.8;
+  max-width: 700px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ---------- GLASS SECTIONS ---------- */
+
+.section {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* ---------- GRID SYSTEM ---------- */
+
+.grid {
+  display: grid;
+  gap: 25px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ---------- MEDIA ---------- */
+
+iframe, img {
+  width: 100%;
+  border-radius: 16px;
+  border: none;
+}
+
+/* ---------- STORE ---------- */
+
+.product {
+  background: rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product h3 {
+  font-size: 18px;
+}
+
+.price {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.product p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.buy-btn {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+/* ---------- HOVER VIDEO PREVIEW ---------- */
+
+.preview-box {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+}
+
+.preview-box img,
+.preview-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.preview-box video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.preview-box:hover video {
+  opacity: 1;
+}
+
+/* ---------- SECTION LABEL ---------- */
+
+.label {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
